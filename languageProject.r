@@ -1,13 +1,40 @@
+#Example of variable typings. R is dynamically typed, so it will automatically type variables
+#unless you add specific identifiers
+
+#Any number will be automatically treated as a numeric type
+myNumeric <- 11.6
+
+#Add an L to the end of a number to turn it into an integer
+myInteger <- 55L
+
+#Complex number take 2 values, a numeric and an imaginary which is denoted by addng an i at the end
+myComplex <- 5i + 3
+
+#Just like in Java and most other languages, add quotations around words to denote them as strings
+myString <- "Hello World!"
+
+#Booleans either contain TRUE or FALSE, always all capitals
+myBoolean <- TRUE
+
+
+#Here are some data structuress in R as well as creating and calling a function
+
 #An example of a function that prints out "Function works!" when called
 exampleFunction <- function() {
   print("Function works!")
 }
 
+exampleFunction()
+
 #Creates an example vector that shows how vectors in R can hold elements of different types
 exampleVector <- c(1, "apple", 37)
 
+exampleVector
+
 #Creates an example matrix (2-dimensional array)
 exampleMatrix <- matrix( c( 1, 2, 3, 4, 5, 6, 7, 8, 9 ), nrow = 3, ncol = 3 )
+
+exampleMatrix
 
 #Creates an example data frame
 exampleDataFrame <- data.frame(
@@ -16,12 +43,29 @@ exampleDataFrame <- data.frame(
   Mix <- c( 2, "Apple", 45 )
 )
 
-
-#Here is where everything is executed
-exampleVector
-
-exampleFunction()
-
-exampleMatrix
-
 exampleDataFrame
+
+
+#R also has built-in graphics for easier access to charts and graphs to visualize information
+
+#This includes plot graphs
+#Single Point
+plot(2,5)
+
+#Multiple Points (first vector is x-axis, second vector is y-axis)
+plot( c(1, 4, 5), c(2, 2, 3))
+
+#You can also use the plot function to make a line graph
+plot(1:10, type="l")
+
+#Pie graphs are also an option
+x <- c(20, 30, 5, 5, 10, 20)
+
+pie(x)
+
+#As well as bar graphs
+x <- c("A", "B", "C", "D")
+
+y <- c(2, 4, 6, 8)
+
+barplot(y, names.arg = x)
