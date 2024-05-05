@@ -69,3 +69,30 @@ x <- c("A", "B", "C", "D")
 y <- c(2, 4, 6, 8)
 
 barplot(y, names.arg = x)
+
+
+#Another thing R is really good at is organization and manipulation of data sets
+#For this example, we will be using the built-in data set "mtcars"
+#You can print this out, just by calling it like so:
+mtcars
+
+#Or if a data set has a description, just add a question mark beforehand to print out the description
+?mtcars
+
+#You can also assign a data set to a variable
+exampleDataSet <- mtcars
+
+#We can now use this variable to do many things such as find the dimension of the data set or
+#find the names of the variables in the data set
+
+dim(exampleDataSet)
+
+name(exampleDataSet)
+
+#You can also find the max or min value of a variable in the data set, as well as its mean, median, mode, etc.
+
+max(exampleDataSet$hp)
+min(exampleDataSet$hp)
+mean(exampleDataSet$hp)
+median(exampleDataSet$hp)
+mode(exampleDataSet$hp)
